@@ -1,0 +1,1 @@
+{{ var_dump('this is index from views/site') }}

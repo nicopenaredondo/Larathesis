@@ -29,4 +29,4 @@
 - created admin dashboard mockup
 - created add patient form
 - created add doctor form
-- test
+- admin can now add doctor accounts ( still need to test it)

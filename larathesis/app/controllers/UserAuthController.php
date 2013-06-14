@@ -33,14 +33,14 @@ class UserAuthController extends BaseController
 		
 		// Gather Sanitized Input
 		$input = array(
-			'email' 		=> Binput::get('email'),
+			'username' 		=> Binput::get('username'),
 			'password' 		=> Binput::get('password'),
 			'rememberMe' 	=> Binput::get('rememberMe')
 			);
 
 		//Setting Validation Rules
 		$rules = array(
-			'email'		=> 'required|email',
+			'username'		=> 'required|email',
 			'password'	=> 'required|min:6'
 			);
 
@@ -53,13 +53,13 @@ class UserAuthController extends BaseController
 		} else{
 			try{
 				//check for suspesion or banned status
-				$user 		= Sentry::getUserProvider()->findByLogin($input['email']);
+				$user 		= Sentry::getUserProvider()->findByLogin($input['username']);
 				$throttle	= Sentry::getThrottleProvider()->findByUserId($user->id);
 				$throttle->check();
 
 				//Set Login credentials
 				$credentials = array(
-					'email'		=> $input['email'],
+					'username'		=> $input['username'],
 					'password'	=> $input['password']
 				);
 
@@ -90,6 +90,11 @@ class UserAuthController extends BaseController
 					return Redirect::to('patient');
 				}
 		}		
+	}
+
+	public function getLogout(){
+		Sentry::logout();
+		return Redirect::to('/');
 	}
 
 }

@@ -24,6 +24,7 @@
 			<div class="nav-collapse collapse">
 				<ul class="nav">
 					<li><a href="#">Home</a></li>
+					<li><a href="{{URL::route('logout')}}">Logout</a></li>
 				</ul>
 			</div>
 			<!--/.nav-collapse -->
@@ -35,6 +36,7 @@
 	<!--/.navbar -->
 	<!--container-->
 	<div class="container">
+		@include('notifications')
 		@yield('container')			
 	</div>
 	<!--container-->

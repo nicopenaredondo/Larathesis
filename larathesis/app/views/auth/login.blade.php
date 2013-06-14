@@ -12,11 +12,11 @@ Log In
 	<form class="form-horizontal" action="{{ route('login') }}" method="post">   
         <input type="hidden" name="_token" value="{{ Session::getToken() }}">
 
-        <div class="control-group {{ ($errors->has('email')) ? 'error' : '' }}" for="email">
-            <label class="control-label" for="email">E-mail</label>
+        <div class="control-group {{ ($errors->has('username')) ? 'error' : '' }}" for="username">
+            <label class="control-label" for="username">E-mail</label>
             <div class="controls">
-                <input name="email" id="email" value="{{ Request::old('email') }}" type="text" class="input-xlarge" placeholder="E-mail">
-                {{ ($errors->has('email') ? $errors->first('email') : '') }}
+                <input name="username" id="username" value="{{ Request::old('username') }}" type="text" class="input-xlarge" placeholder="E-mail">
+                {{ ($errors->has('username') ? $errors->first('username') : '') }}
             </div>
         </div>
     

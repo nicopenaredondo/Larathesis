@@ -20,10 +20,10 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</a>
-			<a class="brand" href="#" name="top">Brand Name</a>
+			<a class="brand" href="#" name="top">Index Page</a>
 			<div class="nav-collapse collapse">
 				<ul class="nav">
-					<li><a href="#">Home</a></li>
+					<li><a href="{{ URL::route('login') }}">Login</a></li>
 				</ul>
 			</div>
 			<!--/.nav-collapse -->

@@ -19,6 +19,7 @@ Route::get('/', function()
 // ## ::User Account Routes::  ##
 Route::get('user/login',array('before'=>'sentry_auth','uses'=>'UserAuthController@getLogin'));
 Route::post('user/login',array('as' => 'login','uses' => 'UserAuthController@postLogin'));
+Route::get('logout',array('as'=>'logout','uses' => 'UserAuthController@getLogout'));
 Route::controller('user','UserAuthController');
 
 // ## ::Administrator Routes::  ##

@@ -12,19 +12,19 @@ class SentryUserSeeder extends Seeder {
 		DB::table('users')->delete();
 
 		Sentry::getUserProvider()->create(array(
-	        'email'    => 'admin@admin.com',
+	        'username'    => 'admin@admin.com',
 	        'password' => 'thesisadmin',
 	        'activated' => 1,
 	    ));
 
 	    Sentry::getUserProvider()->create(array(
-	        'email'    => 'doctor@doctor.com',
+	        'username'    => 'doctor@doctor.com',
 	        'password' => 'thesisdoctor',
 	        'activated' => 1,
 	    ));
 
 	     Sentry::getUserProvider()->create(array(
-	        'email'    => 'patient@patient.com',
+	        'username'    => 'patient@patient.com',
 	        'password' => 'thesispatient',
 	        'activated' => 1,
 	    ));

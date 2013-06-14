@@ -23,9 +23,9 @@ Route::controller('user','UserAuthController');
 
 // ## ::Administrator Routes::  ##
 Route::group(array('prefix' => 'admin','before' => 'admin_auth'),function(){
-	Route::get('/',function(){
-		return var_dump('this is the admin index');
-	});
+	Route::get('/',array('as' => 'dashboard','uses' => 'AdminDashboardController@getIndex'));
+	Route::controller('patient','AdminPatientController');
+	Route::controller('doctor','AdminDoctorController');
 });
 
 

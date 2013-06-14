@@ -121,7 +121,7 @@ Route::filter('admin_auth',function(){
 	if (!Sentry::getUser()->hasAccess('administrator'))
 	{
 		// has no access
-		return Response::make('Page Not Found', '404');
+		return Response::make('You\'re not authorized to view this page', '404');
 	}
 });
 
@@ -134,7 +134,7 @@ Route::filter('doctor_auth',function(){
 	if (!Sentry::getUser()->hasAccess('doctor'))
 	{
 		// has no access
-		return Response::make('Page Not Found', '404');
+		return Response::make('You\'re not authorized to view this page', '404');
 	}
 });
 
@@ -147,7 +147,7 @@ Route::filter('patient_auth',function(){
 	if (!Sentry::getUser()->hasAccess('patient'))
 	{
 		// has no access
-		return Response::make('Page Not Found', '404');
+		return Response::make('You\'re not authorized to view this page', '404');
 	}
 });
 

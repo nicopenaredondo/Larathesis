@@ -18,3 +18,14 @@
 - added Assets folder
 - **User Authentication** is now working
 
+####June 13, 2013
+- **Meeting** 
+
+####June 14, 2013
+- **REST**
+
+####June 15,2013 
+- added folders under views/admin
+- created admin dashboard mockup
+- created add patient form
+- created add doctor form
